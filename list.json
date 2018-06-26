@@ -1,0 +1,43 @@
+    [
+  {
+    "customer": {
+    "id":1,
+    "deposit":5000,
+    "transaction":[{
+      "id":1,
+      "time":"25-Jun-2018 12:30PM"
+    },
+    {
+      "id":2,
+      "time":"15-Jun-2018 02:30 PM"
+    }],
+    "expense":4000,
+    "classification":""
+  }},
+  {
+    "customer": {
+  "id":2,
+  "deposit":5000,
+  "transaction":[{
+    "id":1,
+    "time":"01-Jun-2018 12:30PM"
+  }],
+  "expense":1000,
+  "classification":""
+  }},
+  {
+    "customer": {
+    "id":3,
+    "deposit":5000,
+    "transaction":[{
+      "id":1,
+      "time":"25-Jun-2018 09:30AM"
+    },
+    {
+      "id":2,
+      "time":"25-Jun-2018 11:30AM"
+    }],
+    "expense":2000,
+    "classification":""
+  }}
+]

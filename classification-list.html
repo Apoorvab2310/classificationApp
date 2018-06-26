@@ -1,0 +1,53 @@
+<link rel="import" href="/bower_components/polymer/polymer.html">
+
+<link rel="import" href="/bower_components/paper-input/paper-input.html">
+<link rel="import" href="/bower_components/paper-button/paper-button.html">
+<link rel="import" href="/bower_components/iron-ajax/iron-ajax.html">
+<link rel="import" href="/bower_components/paper-dropdown-menu/paper-dropdown-menu.html">
+<link rel="import" href="/bower_components/iron-data-table/iron-data-table.html">
+<link rel="import" href="/bower_components/paper-listbox/paper-listbox.html">
+<link rel="import" href="/bower_components/neon-animation/web-animations.html">
+<link rel="import" href="/bower_components/iron-dropdown/iron-dropdown.html">
+  <script src="/bower_components/web-animations-js/web-animations-next-lite.min.js"></script>
+
+
+<dom-module id="classification-list">
+    <template>
+        <p>Enter month and customer Id:</p>
+        <span>Customer Id:</span>
+        <paper-input id="customerId" placeholder="Enter CustomerId"></paper-input>
+<br/><br/>
+        <span>Month:</span>
+          <paper-input id="month"></paper-input>
+          <br/>
+
+          <paper-button raised on-click="getResults">Search</paper-button>
+
+ <iron-ajax url="list.json" last-response="{{list}}" auto></iron-ajax>
+          <iron-data-table items="[[res]]" filter="{{_filter(customerId)}}">
+        <data-table-column name="Classification">
+          <template>[[item.customer.id]]</template>
+        </data-table-column>
+        <data-table-column name="Current Balance">
+          <template>[[item.customer.transaction[0].time]]</template>
+        </data-table-column>
+      </iron-data-table>
+
+    </template>
+
+    <script>
+        Polymer({
+            is: 'classification-list',
+            getResults : function()
+          {
+            console.log("id is"+this.$.customerId.value);
+
+          }
+        });
+
+
+
+
+    </script>
+
+</dom-module>

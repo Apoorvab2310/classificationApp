@@ -1,0 +1,24 @@
+{
+  "name": "classificationApp",
+  "authors": "apoorva",
+  "description": "Get Classification",
+  "main": "",
+  "license": "",
+  "main": "index.html",
+    "keywords": [
+        "polymer",
+        "web-components",
+        "web-animations-js"
+    ],
+    "ignore": [
+        "**/.*",
+        "bower_components"
+    ],
+    "dependencies": {
+        "polymer": "Polymer/polymer#^1.0.0",
+        "paper-button": "PolymerElements/paper-button#^2.0.0",
+        "paper-input": "PolymerElements/paper-input#^2.0.0",
+        "paper-dropdown-menu": "PolymerElements/paper-dropdown-menu#^2.0.0",
+        "paper-listbox": "PolymerElements/paper-listbox#^2.0.0"
+    }
+}
